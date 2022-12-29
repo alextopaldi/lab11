@@ -1,0 +1,12 @@
+stages:          
+  - deploy
+
+
+deploy-job:     
+  image: python:latest
+  stage: deploy  
+  script:
+    - python main.py > result.txt
+  artifacts:
+      paths:
+          - result.txt
